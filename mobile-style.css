@@ -1,0 +1,298 @@
+:root {
+  --color-primary: #53ffb6;
+  --color-secondary: #6053ff;
+  --color-tertiary: #ff539c;
+  --color-quaternary: #f2ff53;
+  --color-primary-darker: #2a805c;
+  --color-secondary-darker: #68238f;
+  --color-tertiary-darker: #8f3223;
+  --color-quaternary-darker: #4a8f23;
+  --color-primary-lighter: #62bfce;
+  --color-primary-opacity: #fff;
+  --color-secondary-opacity: #fff;
+  --color-tertiary-opacity: #fff;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EB Garamond';
+}
+
+html {
+  background-color: #ddd;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* HIDDEN CLASS */
+.hidden {
+  display: none;
+}
+
+/* NAV AND HEADER */
+
+.header {
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  color: #333;
+  margin-bottom: 60%;
+}
+
+.nav ul {
+  z-index: 10;
+  list-style-type: none;
+  padding-top: 50px;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+}
+
+.nav ul li {
+  padding: 15px;
+  /* width: left; */
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: opacity 0.5s;
+}
+
+.nav li:hover {
+  cursor: pointer;
+}
+
+.header-name-container {
+  text-align: center;
+  max-width: 440px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 45%;
+  border-bottom: 1px black solid;
+  /* border-radius: 15px 50px 35px; */
+  /* background-color: var(--color-secondary); */
+  /* border-bottom: 1px solid #333; */
+}
+
+.header-name {
+  color: #0a2017;
+  height: 100%;
+  font-size: 2.8rem;
+  font-weight: 200;
+  letter-spacing: 0.15rem;
+  cursor: default;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  margin-top: 300px;
+  padding-top: 200px;
+}
+
+/* TIC-TAC-TOE Game */
+
+.tictactoe {
+  height: 100vmin;
+}
+
+.ttt-table {
+  table-layout: fixed;
+  cursor: default;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 90vmin;
+  width: 90vmin;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.ttt-title {
+  margin-bottom: 50px;
+  padding-top: 100px;
+  font-size: 2.5rem;
+}
+
+.ttt-middle-row {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.ttt-middle-column {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.ttt-square {
+  font-family: 'Kalam';
+  height: 33%;
+  width: 33%;
+}
+
+.ttt-options-container {
+  cursor: default;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.ttt-btns,
+.ttt-difficulty-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-xoro,
+.ttt-reset-btn {
+  font-size: 28px;
+  font-family: 'Source Sans Pro';
+}
+
+.ttt-btn {
+  cursor: pointer;
+  font-size: 25px;
+  color: #eafff6;
+  padding: 10px;
+  padding-top: 8px;
+  background-color: #349f72;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100px;
+}
+
+.ttt-difficulty-btn {
+  font-size: 28px;
+  font-family: 'Source Sans Pro';
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  background-color: #ddd;
+  color: black;
+  border: 1px #555 solid;
+}
+
+.ttt-easy {
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+}
+
+.ttt-hard {
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
+
+.diff-selected {
+  background-color: rgba(89, 0, 131, 0.74);
+  color: white;
+  cursor: default;
+}
+
+.ttt-font {
+  /* font-size: 34px; */
+  font-family: 'Kalam';
+}
+
+.xoro-btn {
+  cursor: pointer;
+  font-family: 'Kalam';
+}
+
+.xoro-btn.ttt-btn:hover {
+  background-color: #1f6044;
+}
+.ttt-reset-btn {
+  background-color: #bf3e75;
+  transition: background-color 0.5s;
+}
+
+.ttt-reset-btn:hover {
+  background-color: #802a4e;
+}
+
+/* MODAL WINDOW */
+
+.modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.ttt-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75vmin;
+  background-color: #ddd;
+  /* padding: 5rem 6rem; */
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 5%;
+}
+
+.modal-window {
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.ttt-winloss-message {
+  font-size: 34px;
+  padding-top: 30%;
+  font-weight: 500;
+  width: 100%;
+  margin: auto;
+}
+
+.tryagain-btn {
+  position: relative;
+  font-size: 18px;
+  top: 20px;
+  margin: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}

@@ -1,0 +1,412 @@
+:root {
+  --color-primary: #53ffb6;
+  --color-secondary: #6053ff;
+  --color-tertiary: #ff539c;
+  --color-quaternary: #f2ff53;
+  --color-primary-darker: #2a805c;
+  --color-secondary-darker: #68238f;
+  --color-tertiary-darker: #8f3223;
+  --color-quaternary-darker: #4a8f23;
+  --color-primary-lighter: #62bfce;
+  --color-primary-opacity: #fff;
+  --color-secondary-opacity: #fff;
+  --color-tertiary-opacity: #fff;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EB Garamond';
+}
+
+/* .background {
+  position: absolute;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+  background-image: url(/bgrd.svg);
+
+  z-index: 20; 
+}*/
+
+html {
+  background-color: #ddd;
+  /* background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23af6f8a' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* HIDDEN CLASS */
+.hidden {
+  display: none;
+}
+
+/* NAV AND HEADER */
+
+.header {
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  color: #333;
+  margin-bottom: 10%;
+  /* background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary) 50%,
+    rgba(255, 255, 255, 0) 50% 100%
+  ); */
+}
+
+.nav ul {
+  z-index: 10;
+  list-style-type: none;
+  padding-left: 30px;
+  position: fixed;
+}
+
+.nav ul li {
+  padding: 15px;
+  float: left;
+  display: block;
+  font-size: 1.2rem;
+  transition: opacity 0.5s;
+}
+
+.nav li:hover {
+  cursor: pointer;
+}
+
+.header-name-container {
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 45%;
+  border-bottom: 1px black solid;
+  /* border-radius: 15px 50px 35px; */
+  /* background-color: var(--color-secondary); */
+  /* border-bottom: 1px solid #333; */
+}
+
+.header-name {
+  color: #0a2017;
+  height: 100%;
+  font-size: 3.7rem;
+  font-weight: 200;
+  letter-spacing: 0.15rem;
+  cursor: default;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  margin-top: 300px;
+  padding-top: 200px;
+}
+
+/* BACKGROUD STUFF */
+
+.yellow-circle {
+  background-color: var(--color-quaternary);
+  position: absolute;
+  top: 770px;
+  left: 300px;
+  z-index: -1;
+  width: 425px;
+  height: 425px;
+  border-radius: 100%;
+}
+
+.purple-triangle {
+  position: relative;
+  right: 50px;
+  transform: rotate(17.5deg);
+  z-index: -2;
+}
+
+.left-triangle {
+  background-image: linear-gradient(
+    to top right,
+    var(--color-tertiary) 50%,
+    rgba(255, 255, 255, 0) 50% 100%
+  );
+  position: absolute;
+  bottom: 15px;
+  left: 300px;
+  z-index: -2;
+  width: 174px;
+  height: 300px;
+}
+
+.right-triangle {
+  background-image: linear-gradient(
+    to top left,
+    var(--color-tertiary) 50%,
+    rgba(255, 255, 255, 0) 50% 100%
+  );
+  position: absolute;
+  bottom: 15px;
+  left: 127px;
+  z-index: -2;
+  width: 174px;
+  height: 300px;
+}
+
+/* PROJECTS */
+
+main img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.projects-buttons-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.projects-button {
+  width: 25%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-bottom: 15%;
+  border: none;
+  background: none;
+}
+
+#proj-btn-1 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.75s;
+}
+
+#proj-btn-2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+#proj-btn-3 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2.25s;
+}
+
+#proj-btn-4 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.projects-button:hover {
+  cursor: pointer;
+}
+
+/* TIC-TAC-TOE Game */
+
+.tictactoe {
+  height: 600px;
+}
+
+.ttt-title {
+  margin-bottom: 50px;
+}
+
+.ttt-table {
+  table-layout: fixed;
+  cursor: default;
+  margin: auto;
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 500px;
+  width: 500px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.sub-header {
+  font-size: 2rem;
+}
+
+.ttt-middle-row {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.ttt-middle-column {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.ttt-square {
+  font-family: 'Kalam';
+  height: 33%;
+  width: 33%;
+}
+
+.ttt-options-container {
+  cursor: default;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.ttt-btns,
+.ttt-difficulty-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-xoro,
+.ttt-reset-btn {
+  font-size: 28px;
+  font-family: 'Source Sans Pro';
+}
+
+.ttt-btn {
+  cursor: pointer;
+  font-size: 25px;
+  color: #eafff6;
+  padding: 10px;
+  padding-top: 8px;
+  background-color: #349f72;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100px;
+}
+
+.ttt-difficulty-btn {
+  font-size: 28px;
+  font-family: 'Source Sans Pro';
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  background-color: #ddd;
+  color: black;
+  border: 1px #555 solid;
+}
+
+.ttt-easy {
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+}
+
+.ttt-hard {
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
+
+.diff-selected {
+  background-color: rgba(89, 0, 131, 0.74);
+  color: white;
+  cursor: default;
+}
+
+.ttt-font {
+  /* font-size: 34px; */
+  font-family: 'Kalam';
+}
+
+.xoro-btn {
+  cursor: pointer;
+  font-family: 'Kalam';
+}
+
+.xoro-btn.ttt-btn:hover {
+  background-color: #1f6044;
+}
+.ttt-reset-btn {
+  background-color: #bf3e75;
+  transition: background-color 0.5s;
+}
+
+.ttt-reset-btn:hover {
+  background-color: #802a4e;
+}
+
+/* MODAL WINDOW */
+
+.modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.ttt-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #ddd;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 5%;
+}
+
+.modal-window {
+  width: 90%;
+  height: 90%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ttt-winloss-message {
+  font-size: 34px;
+  font-weight: 500;
+  margin: auto;
+}
+
+.tryagain-btn {
+  position: relative;
+  font-size: 18px;
+  top: 20px;
+  margin: auto;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}

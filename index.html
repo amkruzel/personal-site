@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-device-width: 440px)"
+      href="style.css"
+    />
+    <!-- If on mobile -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (max-device-width: 440px)"
+      href="mobile-style.css"
+    />
+
+    <script defer src="script.js"></script>
+    <script defer src="tictactoe.js"></script>
+    <title>Alexander Kruzel</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <header class="header" id="header-section">
+      <nav class="nav">
+        <ul>
+          <li class="nav-item" href="#header-section">home</li>
+          <li class="nav-item" href="#projects-section">projects</li>
+          <li class="nav-item" href="#contact-section">contact</li>
+        </ul>
+      </nav>
+      <div class="header-name-container">
+        <h1 class="header-name">Alexander Kruzel</h1>
+      </div>
+    </header>
+    <main>
+      <div class="yellow-circle hidden"></div>
+      <div class="purple-triangle hidden">
+        <div class="left-triangle"></div>
+        <div class="right-triangle"></div>
+      </div>
+      <section class="projects-section" id="projects-section">
+        <div class="projects-buttons-container">
+          <button
+            name="music"
+            type="button"
+            class="projects-button"
+            id="proj-btn-1"
+          >
+            <img src="./images/music.png" />music</button
+          ><button
+            name="games"
+            type="button"
+            class="projects-button"
+            id="proj-btn-2"
+          >
+            <img src="./images/games.png" />games</button
+          ><button
+            name="algorithms"
+            type="button"
+            class="projects-button"
+            id="proj-btn-3"
+          >
+            <img src="./images/algorithms.png" />algorithms</button
+          ><button
+            name="misc."
+            type="button"
+            class="projects-button"
+            id="proj-btn-4"
+          >
+            misc.
+          </button>
+        </div>
+        <div class="tictactoe">
+          <table class="ttt-table">
+            <caption class="ttt-title">
+              <span class="sub-header"><br /></span>
+              Tic Tac Toe
+            </caption>
+            <tr class="ttt-row ttt-top-row">
+              <td class="ttt-square" data-sqr="top-left">X</td>
+              <td class="ttt-square ttt-middle-column" data-sqr="top-center">
+                X
+              </td>
+              <td class="ttt-square" data-sqr="top-right">&nbsp</td>
+            </tr>
+            <tr class="ttt-row ttt-middle-row">
+              <td class="ttt-square" data-sqr="middle-left">O</td>
+              <td class="ttt-square ttt-middle-column" data-sqr="middle-center">
+                &nbsp
+              </td>
+              <td class="ttt-square" data-sqr="middle-right">O</td>
+            </tr>
+            <tr class="ttt-row ttt-bottom-row">
+              <td class="ttt-square" data-sqr="bottom-left">O</td>
+              <td class="ttt-square ttt-middle-column" data-sqr="bottom-center">
+                X
+              </td>
+              <td class="ttt-square" data-sqr="bottom-right">X</td>
+            </tr>
+          </table>
+          <div class="ttt-options-container">
+            <div class="ttt-difficulty-btns">
+              <button
+                name="easy"
+                value="easy"
+                type="button"
+                class="ttt-btn ttt-difficulty-btn ttt-easy diff-selected"
+              >
+                EASY
+              </button>
+              <button
+                name="hard"
+                value="hard"
+                type="button"
+                class="ttt-btn ttt-difficulty-btn ttt-hard"
+              >
+                HARD
+              </button>
+            </div>
+            <div class="ttt-xoro">
+              <span class="ttt-font">X</span> or
+              <span class="ttt-font">O</span>&nbsp?&nbsp&nbsp<span
+                class="ttt-font"
+                >X</span
+              >
+              goes first
+            </div>
+            <div class="ttt-btns">
+              <button name="x" value="x" type="button" class="xoro-btn ttt-btn">
+                X
+              </button>
+              <button name="o" value="o" type="button" class="xoro-btn ttt-btn">
+                O
+              </button>
+              <button
+                name="ttt-reset"
+                value="ttt-reset"
+                type="button"
+                class="ttt-reset-btn ttt-btn hidden"
+              >
+                RESET
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section" id="contact-section"></section>
+    </main>
+
+    <footer class="footer">&copy 2021 Alexander Kruzel</footer>
+    <div class="ttt-modal modal-hidden hidden">
+      <button class="btn--close-modal">&times;</button>
+      <div class="modal-window">
+        <div class="ttt-winloss-message">LOSS</div>
+        <br /><button class="tryagain-btn ttt-btn">Try again</button>
+      </div>
+    </div>
+    <div class="overlay modal-hidden"></div>
+  </body>
+</html>
+
+<!--
+
+
+  <div>Icons made by <a href="" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+  
+-->
