@@ -47,6 +47,11 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* HIDDEN CLASS */
 .hidden {
   display: none;
@@ -115,6 +120,27 @@ body {
   margin-top: 300px;
   padding-top: 200px;
 }
+
+.footer ul {
+  z-index: 10;
+  list-style-type: none;
+  width: 245px;
+  margin: auto;
+  /* padding-left: 30px;
+  position: fixed; */
+}
+
+.footer ul li {
+  padding: 15px;
+  display: inline-block;
+  font-size: 1.2rem;
+  transition: opacity 0.5s;
+}
+
+.footer li:hover {
+  cursor: pointer;
+}
+
 
 /* BACKGROUD STUFF */
 

@@ -2,6 +2,8 @@
 
 const navBar = document.querySelector('.nav');
 const navItems = document.querySelectorAll('.nav-item');
+const socials = document.querySelector('.socials')
+const socialItems = document.querySelectorAll('.social-item');
 const projectsSection = document.querySelector('.projects-section');
 const modal = document.querySelector('.ttt-modal');
 const overlay = document.querySelector('.overlay');
@@ -56,3 +58,18 @@ navBar.addEventListener('click', function (e) {
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   projectsSectionVisible(e);
 });
+
+////////////////////////
+/// Footer events
+// Hover
+
+// socials.addEventListener('mouseover', function (e) {
+//   const item = e.target;
+
+//   socialItems.forEach(e => (e.style.opacity = '.4'));
+//   item.style.opacity = '1';
+
+//   socials.addEventListener('mouseout', function (e) {
+//     socialItems.forEach(e => (e.style.opacity = '1'));
+//   });
+// });
