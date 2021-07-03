@@ -6,9 +6,10 @@ This is my personal website. It will be updated periodically as I learn more and
 - [] Add a proper contact page
 - [] Put projects on a separate page
 - [] Add a slideshow for pictures of Buster
-![Buster1](media/buster1.jpg =150)
-![Buster2](media/buster2.jpg =80)
+<img src="media/buster1.jpg" width="150">
+<img src="media/buster2.jpg" width="80">
 
+---
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
